@@ -1,0 +1,297 @@
+.home {
+    &__container {
+        // min-height: 90vh;
+    }
+
+    &__bg {
+        &-image {
+            width: 100%;
+            animation: fade-in .8s ease-in forwards;
+            background-image: url(https://www.tastefrance.com/sites/tastefrance.com/files/2021-09/GettyImages-1081422898.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0 -15rem;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #283F3B;
+        }
+
+        &-title {
+            font-size: 5rem;
+            font-weight: bold;
+            opacity: 0;
+            animation: fade-in-down 2s ease-in forwards;
+            animation-delay: 1s;
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+
+        &-subtitle {
+            font-size: 2rem;
+            opacity: 0;
+            animation: fade-in-up 2s ease-in forwards;
+            animation-delay: 2s;
+            color: white;
+            background-color: black;
+            text-align: center;
+            border-radius: .5rem;
+            padding: .2rem .3rem;
+            margin: 0;
+        }
+    }
+
+
+    &__edition-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 3rem 1rem;
+        align-items: flex-start;
+        justify-content: space-between;
+        position: relative;
+        width: 100%;
+    }
+
+    &__subscribe {
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+        animation: fade-in-card 1s ease-in forwards;
+    }
+
+    &__landing {
+
+        &-title {
+            background-color: #1f4c5f;
+            color: white;
+            width: fit-content;
+            padding: .2rem .4rem;
+            margin: 0 0 -2px 0;
+            transition: .2s;
+
+            font-size: 1.3rem;
+
+            &-container {
+                border-bottom: 2px solid #1f4c5f;
+                width: 100%;
+                margin-bottom: 1rem;
+                transition: .2s;
+            }
+        }
+
+        &-header {
+            margin: 2rem 0 0 0;
+            font-size: 1.5rem;
+
+        }
+
+        &-row {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 1.5rem 0;
+            gap: 2.5rem;
+            justify-content: space-between;
+        }
+
+        &-col1 {
+            display: flex;
+            flex-direction: column;
+            max-width: 55%;
+        }
+
+
+        &-col2 {
+            display: flex;
+            flex-direction: column;
+            max-width: 45%;
+        }
+
+        &-latest {
+            display: flex;
+            flex-direction: column;
+
+            &-img {
+                cursor: pointer;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+                &-wrapper {
+                    width: 100%;
+                    max-height: 45vh;
+                }
+            }
+
+            &-date {
+                cursor: pointer;
+                margin: .3rem 0;
+                transition: .2s;
+                width: fit-content;
+                font-weight: bold;
+                color: #bb764c
+            }
+
+            &-title {
+                text-decoration: none;
+                cursor: pointer;
+                margin: .2rem 0;
+                font-size: 2rem;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &-content {
+                margin: .2rem 0;
+                font-size: 1.2rem;
+            }
+        }
+
+
+        &-stories {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+
+            &-item {
+                display: flex;
+                flex-direction: row;
+                transition: .2s;
+                cursor: pointer;
+                height: 22%;
+                overflow: hidden;
+            }
+
+            &-header {
+                margin-top: 0;
+            }
+
+            &-text {
+                width: 65%;
+                margin: 0 1rem 0 0;
+            }
+
+            &-title {
+                text-decoration: none;
+                cursor: pointer;
+                margin: 0;
+                font-size: 1.2rem;
+                font-weight: bold;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            &-date {
+                color: #bb764c;
+                font-size: .9rem;
+                font-weight: bold;
+                margin: .5rem 0;
+                cursor: pointer;
+            }
+
+            &-img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                cursor: pointer;
+
+                &-wrapper {
+                    height: 100%;
+                    width: 35%;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .home {
+        &__container {
+            min-height: 90vh;
+        }
+
+        &__edition-list {
+            gap: 3rem;
+            padding: 1rem 0 2rem 0;
+            align-items: center;
+        }
+
+        &__subscribe {
+            width: 100%;
+        }
+
+        &__landing {
+
+            &-title {
+                &-container {
+                    max-width: 100%;
+                    width: unset;
+                    margin: 2rem 1rem 0 1rem;
+                }
+            }
+
+            &-header {
+                font-size: 1.2rem;
+                margin: 2rem 1rem 0 1rem;
+            }
+
+            &-row {
+                flex-direction: column;
+                margin: 1.5rem 0;
+                gap: 1rem;
+            }
+
+            &-col1 {
+                max-width: 100%;
+                margin: 0 1rem;
+            }
+
+            &-col2 {
+                max-width: 100%;
+                margin: 0 1rem;
+            }
+
+            &-stories {
+                gap: 1rem;
+
+                &-header {
+                    margin: 1rem 0;
+                }
+
+                &-title {
+                    font-size: 1rem;
+                    display: -webkit-box;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                }
+
+                &-img {
+                    &-wrapper {
+                        height: 4.5rem;
+                        overflow: hidden;
+                        width: 30%;
+                    }
+                }
+            }
+        }
+
+        &__edition {
+            &-list {
+                flex-direction: column;
+            }
+        }
+    }
+}
